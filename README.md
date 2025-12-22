@@ -72,12 +72,11 @@ Mental health resources are often difficult to access instantly. This project ai
 ## 🌍 Live Deployment
 
 🔗 **Live App URL**  
-(Add your Render URL once deployment completes)
-
+```
 https://mental-health-care-chatbot.onrender.com
+```
 
-yaml
-Copy code
+
 
 ---
 
@@ -109,71 +108,59 @@ source venv/bin/activate
 ---
 ## 3️⃣ Install Dependencies
 ```bash
-Copy code
+
 pip install -r requirements.txt
 ```
 ## ▶️ Usage
 Run the Streamlit app locally:
 
 ```bash
-Copy code
+
 streamlit run app.py
 ```
 Open in browser:
 
 arduino
-Copy code
+```
 http://localhost:8501
+```
 ## 📁 Project Structure
-text
-Copy code
+
+```
 Mental-health-care-chatbot/
 │
 ├── .streamlit/
 │   └── config.toml              # Streamlit configuration
-
 │
 ├── app.py                       # Main Streamlit application
-
 │
 ├── requirements.txt             # Python dependencies
-
 │
 ├── mental_healthcare_chatbot/
-
 │   ├── __init__.py
-
 │   ├── chatbot.py               # Core chatbot logic using Gemini
-
 │   └── prompts.py               # Prompt templates / system instructions
-
 │
 ├── app_utils/
-
 │   ├── __init__.py
-
 │   └── helpers.py               # Utility/helper functions
 │
 ├── faiss_db_raptor/             # Vector store (if RAG is enabled)
 │
 ├── db/
-
 │   └── .gitkeep                 # Placeholder for future database usage
-
 │
 ├── assets/
-
 │   └── screenshots/             # Screenshots / demo images (optional)
-
 │
 ├── .gitignore                   # Ignored files and folders
-
 │
 ├── render.yaml                  # Render deployment configuration (optional)
-
 │
 └── README.md                    # Project documentation
 
+```
+---
 ## 🧠 How It Works
 -User enters a message in the Streamlit UI
 
@@ -184,7 +171,7 @@ Mental-health-care-chatbot/
 -The response is displayed back to the user
 
 -The chatbot does not permanently store user data by default.
-
+---
 ## 🗂️ Database Folder (db)
 -The db/ folder is included as a placeholder
 
@@ -195,26 +182,26 @@ The folder exists to:
 Avoid path-not-found errors during deployment
 
 Allow easy future upgrades (chat history, analytics, logs)
-
+---
 📌 Git tracks this folder using a .gitkeep file.
 
 ⚠️ On Render free tier, file-based storage is not persistent across redeploys.
-
-☁️ Deployment on Render
+---
+## ☁️ Deployment on Render
 Build Command
 ```bash
-Copy code
+
 pip install -r requirements.txt
-Start Command
+
 ```
 ```bash
-Copy code
+
 streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
 ```
 Instance Type
 Free tier
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 Set the Gemini API key in Render:
 
 Key	Value
@@ -223,10 +210,10 @@ GEMINI_API_KEY	Your Gemini API key
 Used in code as:
 
 python
-Copy code
+```
 import os
 import google.generativeai as genai
-
+```
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 ## 🔮 Future Enhancements
 ## 💬 Chat history storage
@@ -248,8 +235,7 @@ If you are experiencing severe mental health distress, please consult a qualifie
 ## 📜 License
 This project is licensed under the MIT License.
 
-yaml
-Copy code
+
 
 ---
 
