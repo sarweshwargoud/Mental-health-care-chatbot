@@ -89,83 +89,106 @@ git clone https://github.com/sarweshwargoud/Mental-health-care-chatbot.git
 cd Mental-health-care-chatbot
 ```
 ## 2️⃣ Create & Activate Virtual Environment
-bash
-Copy code
+```bash
+
 python -m venv venv
+```
 Windows
+---
+```bash
 
-bash
-Copy code
 venv\Scripts\activate
-macOS / Linux
+```
 
-bash
-Copy code
+macOS / Linux
+---
+```bash
+
 source venv/bin/activate
-3️⃣ Install Dependencies
-bash
+```
+---
+## 3️⃣ Install Dependencies
+```bash
 Copy code
 pip install -r requirements.txt
-▶️ Usage
+```
+## ▶️ Usage
 Run the Streamlit app locally:
 
-bash
+```bash
 Copy code
 streamlit run app.py
+```
 Open in browser:
 
 arduino
 Copy code
 http://localhost:8501
-📁 Project Structure
+## 📁 Project Structure
 text
 Copy code
 Mental-health-care-chatbot/
 │
 ├── .streamlit/
 │   └── config.toml              # Streamlit configuration
+
 │
 ├── app.py                       # Main Streamlit application
+
 │
 ├── requirements.txt             # Python dependencies
+
 │
 ├── mental_healthcare_chatbot/
+
 │   ├── __init__.py
+
 │   ├── chatbot.py               # Core chatbot logic using Gemini
+
 │   └── prompts.py               # Prompt templates / system instructions
+
 │
 ├── app_utils/
+
 │   ├── __init__.py
+
 │   └── helpers.py               # Utility/helper functions
 │
 ├── faiss_db_raptor/             # Vector store (if RAG is enabled)
 │
 ├── db/
+
 │   └── .gitkeep                 # Placeholder for future database usage
+
 │
 ├── assets/
+
 │   └── screenshots/             # Screenshots / demo images (optional)
+
 │
 ├── .gitignore                   # Ignored files and folders
+
 │
 ├── render.yaml                  # Render deployment configuration (optional)
+
 │
 └── README.md                    # Project documentation
-🧠 How It Works
-User enters a message in the Streamlit UI
 
-The input is sent to Google Gemini (gemini-pro)
+## 🧠 How It Works
+-User enters a message in the Streamlit UI
 
-Gemini generates a context-aware and empathetic response
+-The input is sent to Google Gemini (gemini-pro)
 
-The response is displayed back to the user
+-Gemini generates a context-aware and empathetic response
 
-The chatbot does not permanently store user data by default.
+-The response is displayed back to the user
 
-🗂️ Database Folder (db)
-The db/ folder is included as a placeholder
+-The chatbot does not permanently store user data by default.
 
-Currently, no active database is used
+## 🗂️ Database Folder (db)
+-The db/ folder is included as a placeholder
+
+-Currently, no active database is used
 
 The folder exists to:
 
@@ -179,13 +202,15 @@ Allow easy future upgrades (chat history, analytics, logs)
 
 ☁️ Deployment on Render
 Build Command
-bash
+```bash
 Copy code
 pip install -r requirements.txt
 Start Command
-bash
+```
+```bash
 Copy code
 streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
+```
 Instance Type
 Free tier
 
@@ -203,24 +228,24 @@ import os
 import google.generativeai as genai
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-🔮 Future Enhancements
-💬 Chat history storage
+## 🔮 Future Enhancements
+## 💬 Chat history storage
 
-🌍 Multilingual support
+-🌍 Multilingual support
 
-🎙️ Voice-based interaction
+-🎙️ Voice-based interaction
 
-📊 Usage analytics
+-📊 Usage analytics
 
-🧠 Emotion / sentiment detection
+-🧠 Emotion / sentiment detection
 
-🔗 RAG-based document grounding
+-🔗 RAG-based document grounding
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 This chatbot is not a medical device and does not provide diagnosis or treatment.
 If you are experiencing severe mental health distress, please consult a qualified professional.
 
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
 
 yaml
