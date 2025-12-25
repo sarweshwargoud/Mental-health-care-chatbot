@@ -172,17 +172,7 @@ Mental-health-care-chatbot/
 
 -The chatbot does not permanently store user data by default.
 ---
-## 🗂️ Database Folder (db)
--The db/ folder is included as a placeholder
 
--Currently, no active database is used
-
-The folder exists to:
-
-Avoid path-not-found errors during deployment
-
-Allow easy future upgrades (chat history, analytics, logs)
----
 📌 Git tracks this folder using a .gitkeep file.
 
 ⚠️ On Render free tier, file-based storage is not persistent across redeploys.
@@ -239,17 +229,5 @@ This project is licensed under the MIT License.
 
 ---
 
-## ✅ You’re Now in a VERY GOOD State
 
-✔ Clean repo  
-✔ Proper `db/` handling  
-✔ Deployment-ready  
-✔ Recruiter-friendly README  
 
-If you want next, I can:
-- Write a **LinkedIn deployment post**
-- Add **README badges**
-- Add **chat history using MongoDB**
-- Convert this into **RAG / Agentic AI**
-
-Just tell me 🚀
