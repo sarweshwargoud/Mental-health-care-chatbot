@@ -173,10 +173,7 @@ Mental-health-care-chatbot/
 -The chatbot does not permanently store user data by default.
 ---
 
-📌 Git tracks this folder using a .gitkeep file.
 
-⚠️ On Render free tier, file-based storage is not persistent across redeploys.
----
 ## ☁️ Deployment on Render
 Build Command
 ```bash
