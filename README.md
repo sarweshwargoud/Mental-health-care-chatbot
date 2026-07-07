@@ -7,7 +7,7 @@ The application is built using **Python and Streamlit** and deployed on **Render
 
 ---
 
-## 📌 Table of Contents
+## 📌 Table of Contents.
 
 - About the Project
 - Motivation
